@@ -2,7 +2,7 @@
 
 This repo contains a CLI application that allows you to get a list of 
 transcripts using the Capio API 
-(https://api.capio.ai/v1/speech/transcript/%3Ctranscript_id), filter
+(https://api.capio.ai/v1/speech/transcript/<transcript_id>), filter
  out just the timestamp and transcripts and save them locally in a word 
   doc
 
@@ -40,10 +40,10 @@ source bin/activate
 
 ```
 
-In case you don't have,
+ **In case you don't have,
  
 ```
-** pip install virtualenv
+pip install virtualenv
 ```
 
 2) Download the project locally
@@ -83,3 +83,8 @@ To exectue all unit tests
 pytest tests.py
 ```
 
+## Assumptions
+
+I wasn't entirely sure on how to convert the timestamp from 
+0.6899999976158142 to 00:00:00.69. Due to time constraints, I decided 
+to use the default format that is returned by the API. 
